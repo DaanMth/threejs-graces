@@ -305,6 +305,14 @@ nav.header .a:hover ~ .cursor {
     letter-spacing: 0.4em;
 
 }
+.first>h3 {
+    font-size: 20px;
+    line-height: 0;
+    font-weight: 100;
+    letter-spacing: .25em;
+    font-style: italic;
+    margin: 35px;
+}
 
 .first>h1:after {
     content: "";
@@ -423,7 +431,6 @@ nav.header .a:hover ~ .cursor {
     align-items: center;
     position: relative;
     width: 100vw;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -436,11 +443,38 @@ nav.header .a:hover ~ .cursor {
     padding: 0;
 }
 
+.third>h2{
+    font-size: 1vw;
+    font-weight: 100;
+    width: 50%;
+    letter-spacing: 6px;
+    color:whitesmoke;
+    padding: 0;
+}
+
+.third>h3{
+    font-size: 23px;
+    font-weight: normal;
+    width: 50%;
+    font-family: sans-serif;
+    color: #898989;
+    padding: 0;
+}
+
+.third>titleEnding{
+    font-size: 1.5vw;
+    font-weight: Bold;
+    width: 50%;
+    font-family: sans-serif;
+    color: #898989;
+    padding: 0;
+}
+
 .third>p{
     column-count: 2;
     column-gap: 40px;
     width: 80%;
-    font-size: 13px;
+    font-size: 23px;
     font-family: sans-serif;
     font-weight: 100;
     line-height: 28px;

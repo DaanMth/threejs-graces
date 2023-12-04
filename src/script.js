@@ -111,7 +111,7 @@ scene.add(fillLight)
 
 /////////////////////////////////////////////////////////////////////////
 ///// LOADING GLB/GLTF MODEL FROM BLENDER
-loader.load('models/gltf/graces-draco2.glb', function (gltf) {
+loader.load('models/gltf/scene.gltf', function (gltf) {
 
     gltf.scene.traverse((obj) => {
         if (obj.isMesh) {
@@ -133,7 +133,7 @@ function clearScene(){
 /////////////////////////////////////////////////////////////////////////
 //// INTRO CAMERA ANIMATION USING TWEEN
 function introAnimation() {
-    new TWEEN.Tween(camera.position.set(0,4,2.7)).to({ x: 0, y: 2.4, z: 8.8}, 3500).easing(TWEEN.Easing.Quadratic.InOut).start()
+    new TWEEN.Tween(camera.position.set(0,4,2.7)).to({ x: 0, y: 0, z: 8.8}, 3500).easing(TWEEN.Easing.Quadratic.InOut).start()
     .onComplete(function () {
         TWEEN.remove(this)
         document.querySelector('.header').classList.add('ended')
@@ -148,24 +148,24 @@ document.getElementById('aglaea').addEventListener('click', () => {
     document.getElementById('aglaea').classList.add('active')
     document.getElementById('euphre').classList.remove('active')
     document.getElementById('thalia').classList.remove('active')
-    document.getElementById('content').innerHTML = 'She was venerated as the goddess of beauty, splendor, glory, magnificence, and adornment. She is the youngest of the Charites according to Hesiod. Aglaea is one of three daughters of Zeus and either the Oceanid Eurynome, or of Eunomia, the goddess of good order and lawful conduct.'
-    animateCamera({ x: 1.9, y: 2.7, z: 2.7 },{ y: 1.1 })
+    document.getElementById('content').innerHTML = "I firmly believe that the path to healing begins with the courage to open up, share experiences, and reject the outdated notion that vulnerability is synonymous with weakness. I redefine strength as the courage to be vulnerable. Men, like all individuals, should not bear the weight of societal expectations that discourage the expression of emotions. True strength lies in acknowledging one's struggles, seeking help, and navigating the path to well-being with resilience and authenticity. In our commitment to destigmatization, I recognize that each person's journey is unique. My manifesto is a call to action, inviting individuals, communities, and society at large to embrace vulnerability, foster understanding, and join hands in rewriting the narrative around men's mental health. Together, we will break down the walls of silence and build a world where mental well-being is a shared priority, free from judgment and stigma."
+    animateCamera({ x: 10, y: -2, z: 10 },{ y: 1.1 })
 })
 
 document.getElementById('thalia').addEventListener('click', () => {
     document.getElementById('thalia').classList.add('active')
     document.getElementById('aglaea').classList.remove('active')
     document.getElementById('euphre').classList.remove('active')
-    document.getElementById('content').innerHTML = 'Thalia, in Greek religion, one of the nine Muses, patron of comedy; also, according to the Greek poet Hesiod, a Grace (one of a group of goddesses of fertility). She is the mother of the Corybantes, celebrants of the Great Mother of the Gods, Cybele, the father being Apollo, a god related to music and dance. In her hands she carried the comic mask and the shepherd’s staff.'
-    animateCamera({ x: -0.9, y: 3.1, z: 2.6 },{ y: -0.1 })
+    document.getElementById('content').innerHTML = "In my pursuit of transforming the landscape of men's mental health, my manifesto places a profound emphasis on the power of community support. I envision a world where we, as individuals, come together, acknowledging the unique challenges faced by men in their mental health journeys and creating a network of understanding, empathy, and unwavering support.  I recognize the strength found in collective understanding. By forming communities that bridge the gap between experiences, we create a supportive space where individuals can freely express themselves without fear of isolation or judgment. Peer support becomes a cornerstone, offering a profound sense of belonging and reminding us that we are not alone on our mental health journeys.By building bonds, fostering strength, and embracing the richness of diverse perspectives, I envision a world where every person, regardless of their journey, finds solace and encouragement within a compassionate community. Together, we stand resilient, dismantling barriers and nurturing a culture of unwavering support for men's mental health."
+    animateCamera({ x: -6, y: 0.6, z: 2},{ y: -1 })
 })
 
 document.getElementById('euphre').addEventListener('click', () => {
     document.getElementById('euphre').classList.add('active')
     document.getElementById('aglaea').classList.remove('active')
     document.getElementById('thalia').classList.remove('active')
-    document.getElementById('content').innerHTML = 'Euphrosyne is a Goddess of Good Cheer, Joy and Mirth. Her name is the female version of a Greek word euphrosynos, which means "merriment". The Greek poet Pindar states that these goddesses were created to fill the world with pleasant moments and good will. Usually the Charites attended the goddess of beauty Aphrodite.'
-    animateCamera({ x: -0.4, y: 2.7, z: 1.9 },{ y: -0.6 })
+    document.getElementById('content').innerHTML = "I firmly believe that everyone, irrespective of background or circumstance, should have equitable access to the resources and support necessary for their mental well-being. As Mental well being is something that should be a given to every single person, no one deservers to live in a mental prison where they have to keep fighting. It is crucial that these resources, whether counseling services, support groups, or educational materials, are within reach for all. Education is a powerful tool for dispelling myths and providing individuals with the knowledge needed to navigate their mental health journeys. By making information accessible and culturally sensitive, we empower individuals to take control of their mental well-being. Accessible mental health resources should encompass physical, emotional, and mental aspects of health. By adopting a comprehensive approach, we ensure that individuals have the tools and knowledge to nurture their overall well-being. accessibility is not just a goal; it is a fundamental right. It is a call to action, urging individuals, communities, and institutions to collaborate in creating a world where mental health support is universally accessible. "
+    animateCamera({ x: -0.8, y: 1, z: 3 },{ y: 0 })
 })
 
 /////////////////////////////////////////////////////////////////////////
